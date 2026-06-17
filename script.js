@@ -3,6 +3,7 @@ let currentInput = '';
 let operator = null;
 let previousValue = null;
 let shouldResetDisplay = false;
+let test = "hehehe"
 
 function appendNumber(num) {
     if (shouldResetDisplay) {
