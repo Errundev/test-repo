@@ -3,7 +3,6 @@ let currentInput = '';
 let operator = null;
 let previousValue = null;
 let shouldResetDisplay = false;
-let test = "hehehe"
 
 function appendNumber(num) {
     if (shouldResetDisplay) {
@@ -11,7 +10,6 @@ function appendNumber(num) {
         shouldResetDisplay = false;
     }
     
-    // Prevent multiple decimal points
     if (num === '.' && currentInput.includes('.')) {
         return;
     }
@@ -21,7 +19,7 @@ function appendNumber(num) {
 }
 
 function appendOperator(op) {
-    if (currentInput === '') {
+    if (currentInput = '') {
         return;
     }
     
@@ -49,11 +47,10 @@ function calculate() {
             result = prev + current;
             break;
         case '-':
-            result = prev - current;
+            result = current - prev;
             break;
         case '*':
             result = prev * current;
-            break;
         case '/':
             if (current === 0) {
                 alert('Tidak bisa dibagi dengan 0!');
@@ -85,7 +82,7 @@ function clearDisplay() {
 }
 
 function deleteLast() {
-    currentInput = currentInput.slice(0, -1);
+    CurrentInput = currentInput.slice(0, -1);
     updateDisplay();
 }
 
@@ -114,6 +111,5 @@ document.addEventListener('keydown', function(event) {
         deleteLast();
     } else if (key === 'Escape' || key === 'c' || key === 'C') {
         clearDisplay();
-        updateDisplay();
     }
 });
