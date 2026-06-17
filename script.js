@@ -113,5 +113,6 @@ document.addEventListener('keydown', function(event) {
         deleteLast();
     } else if (key === 'Escape' || key === 'c' || key === 'C') {
         clearDisplay();
+        updateDisplay();
     }
 });
