@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    padding: 20px;
+}
+
+.calculator {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.calculator h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+    font-size: 28px;
+}
+
+.display {
+    margin-bottom: 20px;
+}
+
+#display {
+    width: 100%;
+    padding: 20px;
+    font-size: 28px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    text-align: right;
+    background-color: #f5f5f5;
+    color: #333;
+    font-weight: 500;
+    transition: border-color 0.3s ease;
+}
+
+#display:focus {
+    outline: none;
+    border-color: #667eea;
+    background-color: #fff;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.btn {
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+.btn.number {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.btn.number:hover {
+    background-color: #e0e0e0;
+}
+
+.btn.operator {
+    background-color: #667eea;
+    color: white;
+}
+
+.btn.operator:hover {
+    background-color: #5568d3;
+}
+
+.btn.equals {
+    background-color: #48bb78;
+    color: white;
+    grid-column: span 2;
+}
+
+.btn.equals:hover {
+    background-color: #38a169;
+}
+
+.btn.clear {
+    background-color: #f56565;
+    color: white;
+}
+
+.btn.clear:hover {
+    background-color: #e53e3e;
+}
+
+.btn.delete {
+    background-color: #ed8936;
+    color: white;
+}
+
+.btn.delete:hover {
+    background-color: #dd6b20;
+}
+
+.btn.zero {
+    grid-column: span 2;
+}
+
+@media (max-width: 480px) {
+    .calculator {
+        padding: 20px;
+    }
+
+    .calculator h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    #display {
+        padding: 15px;
+        font-size: 24px;
+    }
+
+    .btn {
+        padding: 15px;
+        font-size: 16px;
+    }
+}
